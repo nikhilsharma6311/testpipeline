@@ -10,7 +10,7 @@ pipeline {
     stage('Setup Parameters') {
             steps {
                 script {
-                 properties([parameters([gitParameter(branch: '', branchFilter: 'origin/(.*)', defaultValue: 'dev', name: 'Branch', quickFilterEnabled: false, selectedValue: 'NONE', sortMode: 'NONE', tagFilter: '*', type: 'GitParameterDefinition', useRepository: 'https://github.com/nikhilsharma6311/jenkin.git')])])
+                 properties([parameters([gitParameter(branch: '', branchFilter: 'origin/(.*)', defaultValue: 'dev', name: 'Branch', quickFilterEnabled: true, selectedValue: 'NONE', sortMode: 'ASCENDING_SMART', tagFilter: '*', type: 'PT_BRANCH')])])
                 }
             }
     }
